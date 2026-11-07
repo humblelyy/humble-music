@@ -1,0 +1,13 @@
+{
+  "appName": "HUMBLE MUSIC",
+  "latestVersion": "1.0.0",
+  "versionCode": 1,
+  "minimumVersionCode": 1,
+  "downloadPage": "https://humble-music.vercel.app/download",
+  "apkUrl": "",
+  "releaseDate": "",
+  "changelog": [
+    "Initial public release information will be added here."
+  ],
+  "forceUpdate": false
+}

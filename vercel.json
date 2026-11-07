@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    {
+      "source": "/download",
+      "destination": "/"
+    },
+    {
+      "source": "/updates",
+      "destination": "/"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/"
+    },
+    {
+      "source": "/terms",
+      "destination": "/"
+    }
+  ]
+}
