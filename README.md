@@ -1,6 +1,15 @@
 # HUMBLE MUSIC Website
 
-Starter website for `humble-music.vercel.app`.
+Vite-based starter website for `humble-music.vercel.app`.
+
+## Deploy on Vercel
+- Framework preset: **Vite**
+- Root directory: `./`
+- Build command: `npm run build`
+- Output directory: `dist`
+- Install command: `npm install`
+
+The production build command is configured as `vite build`.
 
 ## Run locally
 1. Install Node.js LTS.
@@ -8,14 +17,8 @@ Starter website for `humble-music.vercel.app`.
 3. Run `npm install`
 4. Run `npm run dev`
 
-## Deploy to Vercel
-1. Push this folder to a GitHub repository.
-2. In Vercel, choose **Add New → Project** and import that repository.
-3. Framework preset: Vite. Build command: `npm run build`. Output directory: `dist`.
-4. Deploy, then add `humble-music.vercel.app` under Project → Settings → Domains.
-
 ## Before public release
-- Upload your signed release APK to `public/downloads/`.
+- Upload the signed release APK to `public/downloads/`.
 - Update `public/update.json` with the real version, versionCode and APK URL.
 - Replace the placeholder privacy and terms pages with complete policies.
 - Verify the download and update links on a real Android device.
