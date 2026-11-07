@@ -2,68 +2,52 @@ import './style.css'
 
 const app = document.querySelector('#app')
 const path = window.location.pathname.replace(/\/+$/, '') || '/'
+const arm64Report = 'https://www.virustotal.com/gui/file/1f41c207ce22aeaf87f93d6d99a835833bf7c4078cd51a7c9b8ed91388b99a2f?nocache=1'
+const arm32Report = 'https://www.virustotal.com/gui/file/b6f93e17868745b29f2d06f0c5a8afae29ddd608cd547d6d22b25e3e663c4205?nocache=1'
+// GitHub Release assets: publish files with these exact names to make these links live.
+const releaseBase = 'https://github.com/humblelyy/humble-music/releases/latest/download'
+const arm64Apk = `${releaseBase}/app-arm64-v8a-debug.apk`
+const arm32Apk = `${releaseBase}/app-armeabi-v7a-debug.apk`
 
 const nav = `
 <header class="nav wrap">
-  <a class="brand" href="/"><span class="brand-mark">H</span><span>HUMBLE<span class="muted"> MUSIC</span></span></a>
-  <nav><a href="#features">Features</a><a href="/updates">Updates</a><a href="/privacy">Privacy</a></nav>
+  <a class="brand" href="/" aria-label="HUMBLE MUSIC home"><span class="brand-mark">H</span><span>HUMBLE<span class="muted"> MUSIC</span></span></a>
+  <nav aria-label="Main navigation"><a href="/#experience">Experience</a><a href="/download">Download</a><a href="/updates">Updates</a></nav>
   <a class="nav-cta" href="/download">Get the app <span>↗</span></a>
 </header>`
-
 const footer = `
 <footer class="footer wrap">
-  <div><a class="brand" href="/"><span class="brand-mark small">H</span><span>HUMBLE<span class="muted"> MUSIC</span></span></a><p>Music. Design. Identity.</p></div>
-  <div class="foot-links"><a href="/download">Download</a><a href="/updates">Updates</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
-  <small>© ${new Date().getFullYear()} HUMBLE Studio. All rights reserved.</small>
+  <div><a class="brand" href="/"><span class="brand-mark small">H</span><span>HUMBLE<span class="muted"> MUSIC</span></span></a><p>Music, with a HUMBLE identity.</p></div>
+  <div class="foot-links"><a href="/download">Download</a><a href="/updates">Updates</a><a href="/privacy">Privacy</a><a href="/cookies">Cookies</a><a href="/terms">Terms</a></div>
+  <small>© ${new Date().getFullYear()} HUMBLE Studio. Independent project. Not affiliated with Spotify.</small>
 </footer>`
+const home = `${nav}<main>
+<section class="hero wrap"><div class="hero-copy"><div class="eyebrow"><i></i> AN INDEPENDENT MUSIC EXPERIENCE</div><h1>Your music.<br><span class="gradient">Your space.</span></h1><p class="lead">Meet HUMBLE MUSIC — a carefully shaped Android listening experience with a distinctive interface and a focus on the details.</p><div class="actions"><a class="button primary" href="/download">Explore downloads <b>↗</b></a><a class="button secondary" href="#experience">Discover HUMBLE</a></div><div class="hero-meta"><span><b class="dot green"></b> Android</span><span><b class="dot pink"></b> HUMBLE UI</span><span><b class="dot olive"></b> By HUMBLE Studio</span></div></div><div class="hero-art" aria-hidden="true"><div class="disc disc-back"></div><div class="disc disc-front"><div class="disc-label">H<span>♪</span></div></div><div class="art-caption">HUMBLE MUSIC <span>LISTEN DIFFERENTLY</span></div></div></section>
+<section class="feature-section wrap" id="experience"><div class="section-head"><div><div class="eyebrow">THE EXPERIENCE</div><h2>Made for the<br>moments between.</h2></div><p>A focused music space with expressive visuals, thoughtful navigation and a product that continues to evolve.</p></div><div class="cards"><article class="feature-card"><span class="num">01</span><div class="feature-icon pink-icon">◈</div><h3>Distinct HUMBLE UI</h3><p>A dark, immersive interface with a visual identity of its own.</p></article><article class="feature-card"><span class="num">02</span><div class="feature-icon green-icon">♫</div><h3>Made for Android</h3><p>Architecture-specific builds help you choose the package that matches your device.</p></article><article class="feature-card"><span class="num">03</span><div class="feature-icon olive-icon">✓</div><h3>Release transparency</h3><p>Find version notes, file details and independent scan-report links before installing.</p></article></div></section>
+<section class="download-band wrap"><div><div class="eyebrow">READY WHEN YOU ARE</div><h2>Find your build.<br>Press play.</h2><p>Choose the Android package that matches your device architecture.</p></div><a class="button primary" href="/download">Download HUMBLE MUSIC <b>↗</b></a></section>
+</main>${footer}`
+const download = `${nav}<main class="subpage wrap download-page">
+<div class="eyebrow"><i></i> OFFICIAL HUMBLE MUSIC DOWNLOADS</div><h1>Choose your <span class="gradient">Android build.</span></h1><p class="lead">Select the package that matches your phone's processor architecture. If you are unsure, check your device specifications before downloading.</p>
+<div class="release-summary"><div><span class="live-dot"></span><span>ANDROID BUILDS</span></div><span class="summary-note">APK · ARM architecture</span></div>
+<div class="build-grid">
+<article class="build-card featured"><div class="build-top"><span class="arch-icon">64</span><span class="recommended">MOST COMMON</span></div><div class="build-kicker">FOR MODERN ANDROID PHONES</div><h2>ARM 64-bit</h2><p>For devices using the <code>arm64-v8a</code> architecture. This is the right choice for most modern Android phones.</p><div class="build-spec"><span>Package</span><b>APK · ARM64</b></div><a class="button primary full" href="${arm64Apk}">Download ARM64 <b>↓</b></a><a class="scan-link" href="${arm64Report}" target="_blank" rel="noopener noreferrer"><span class="shield">✓</span> View VirusTotal scan report <span>↗</span></a></article>
+<article class="build-card"><div class="build-top"><span class="arch-icon muted-icon">32</span><span class="recommended secondary-tag">COMPATIBILITY BUILD</span></div><div class="build-kicker">FOR 32-BIT ARM DEVICES</div><h2>ARM 32-bit</h2><p>For older or specific Android devices using the <code>armeabi-v7a</code> architecture.</p><div class="build-spec"><span>Package</span><b>APK · ARM32</b></div><a class="button secondary full" href="${arm32Apk}">Download ARM32 <b>↓</b></a><a class="scan-link" href="${arm32Report}" target="_blank" rel="noopener noreferrer"><span class="shield">✓</span> View VirusTotal scan report <span>↗</span></a></article>
+</div>
+<div class="security-panel"><div class="security-icon">⌑</div><div><h3>Check before you install</h3><p>We provide VirusTotal report links for both APK file hashes. Open the report to review the detection results, scan date and engine details. A scan report is not a guarantee that a file is safe, and results can change over time.</p></div></div>
+<div class="install-info"><h2>Which version should I download?</h2><div class="info-row"><span>ARM64 (arm64-v8a)</span><p>Recommended for most current Android phones.</p></div><div class="info-row"><span>ARM32 (armeabi-v7a)</span><p>Use only if your device requires a 32-bit ARM build.</p></div><p class="small-note">Android may ask you to allow installation from your browser or file manager. Only proceed if you trust the source and have reviewed the file report.</p></div>
+<p class="backlink"><a href="/">← Back to home</a></p></main>${footer}`
+const updates = `${nav}<main class="subpage wrap"><div class="eyebrow">RELEASE NOTES</div><h1>Updates & <span class="gradient">changes.</span></h1><p class="lead">Release notes and version information for HUMBLE MUSIC.</p><section class="release-card"><span class="status">RELEASE INFORMATION</span><h2>Current download builds</h2><p>ARM64 and ARM32 APK packages are listed on the download page. Check the release notes attached to the published GitHub release for the exact version and changes.</p><p><a class="text-link" href="https://github.com/humblelyy/humble-music/releases" target="_blank" rel="noopener noreferrer">View GitHub releases ↗</a></p></section></main>${footer}`
+const privacy = `${nav}<main class="subpage wrap legal-page"><div class="eyebrow">HUMBLE STUDIO · LEGAL</div><h1>Privacy <span class="gradient">policy.</span></h1><p class="lead">Last updated: 7 November 2026</p><section class="legal-content"><h2>1. About this website</h2><p>This website provides information and Android download links for HUMBLE MUSIC. It is operated as an independent project by HUMBLE Studio.</p><h2>2. Information we collect</h2><p>This starter website does not intentionally ask visitors to submit personal information and does not include an account-registration form. The hosting provider may process standard server and security logs, such as IP address, request time and browser information, to deliver and protect the website.</p><h2>3. Cookies and local storage</h2><p>The website may store your cookie-notice preference in your browser's local storage. This is used only to remember that you dismissed the notice; it is not an advertising cookie. See the <a href="/cookies">Cookie Notice</a>.</p><h2>4. Third-party links</h2><p>Download assets may be hosted on GitHub Releases. VirusTotal report links open a third-party service. Those services operate under their own privacy policies and terms.</p><h2>5. App permissions and data</h2><p>The Android app may connect to third-party services required for its functionality. The data handled by those services depends on the features you use and the permissions you grant. This website does not claim that the app collects no data. Review the app's in-app disclosures and the relevant service policies before use.</p><h2>6. Contact</h2><p>For privacy questions, contact HUMBLE Studio through the official links on the developer's website: <a href="https://maheshmadhav.vercel.app/" target="_blank" rel="noopener noreferrer">maheshmadhav.vercel.app</a>.</p><h2>7. Changes</h2><p>This policy may be updated as the website and app change. The date above will be revised when material changes are made.</p></section></main>${footer}`
+const cookies = `${nav}<main class="subpage wrap legal-page"><div class="eyebrow">HUMBLE STUDIO · LEGAL</div><h1>Cookie <span class="gradient">notice.</span></h1><p class="lead">Last updated: 7 November 2026</p><section class="legal-content"><h2>What this website uses</h2><p>This website does not currently use advertising or analytics cookies. It may use your browser's local storage to remember whether you dismissed the cookie notice. Local storage is kept on your device and is not a cookie.</p><h2>Third-party services</h2><p>When you follow a GitHub or VirusTotal link, that service may use its own cookies or similar technologies. Their practices are governed by their own policies.</p><h2>Manage your choice</h2><p>You can clear this website's stored preference through your browser's site-data settings. If optional analytics or advertising technologies are added later, this notice and the consent controls will be updated.</p></section></main>${footer}`
+const terms = `${nav}<main class="subpage wrap legal-page"><div class="eyebrow">HUMBLE STUDIO · LEGAL</div><h1>Terms of <span class="gradient">use.</span></h1><p class="lead">Last updated: 7 November 2026</p><section class="legal-content"><h2>1. Independent project</h2><p>HUMBLE MUSIC is an independent project by HUMBLE Studio. It is not affiliated with, endorsed by, or sponsored by Spotify or any other music service. Third-party names and trademarks belong to their respective owners.</p><h2>2. Downloads</h2><p>Download only from the links presented on this website or the official HUMBLE MUSIC release repository. Check the architecture compatibility and VirusTotal report before installing. You are responsible for deciding whether to install an APK on your device.</p><h2>3. No security guarantee</h2><p>VirusTotal reports are provided as independent reference links. Scan results can change and do not guarantee that a file is harmless or free of vulnerabilities.</p><h2>4. Availability and changes</h2><p>Features, download links and release availability may change. We may update, suspend or remove website content without prior notice.</p><h2>5. Third-party services</h2><p>Third-party services and links are governed by their own terms. HUMBLE Studio is not responsible for external websites or services.</p><h2>6. Contact</h2><p>For questions, visit <a href="https://maheshmadhav.vercel.app/" target="_blank" rel="noopener noreferrer">the developer website</a>.</p></section></main>${footer}`
+const pages = {'/':home,'/download':download,'/updates':updates,'/privacy':privacy,'/cookies':cookies,'/terms':terms}
+app.innerHTML = pages[path] || home
 
-const home = `
-${nav}
-<main>
-<section class="hero wrap">
-  <div class="eyebrow"><i></i> AN INDEPENDENT MUSIC EXPERIENCE</div>
-  <h1>Sound, with a<br><span class="gradient">HUMBLE</span> identity.</h1>
-  <p class="lead">A thoughtfully crafted music experience, built around the details that matter.</p>
-  <div class="actions"><a class="button primary" href="/download">Explore HUMBLE MUSIC <b>↗</b></a><a class="button secondary" href="#features">Discover more</a></div>
-  <div class="hero-meta"><span><b class="dot green"></b> Android</span><span><b class="dot pink"></b> HUMBLE UI</span><span><b class="dot olive"></b> Made by HUMBLE Studio</span></div>
-  <div class="orb orb-one"></div><div class="orb orb-two"></div>
-</section>
-<section class="feature-section wrap" id="features">
-  <div class="section-head"><div><div class="eyebrow">THE EXPERIENCE</div><h2>Less noise.<br>More music.</h2></div><p>Designed with a clear visual language, expressive motion and a focused listening experience.</p></div>
-  <div class="cards">
-    <article class="feature-card"><span class="num">01</span><div class="feature-icon pink-icon">◈</div><h3>HUMBLE UI</h3><p>A distinct interface with a dark, immersive atmosphere and carefully tuned details.</p></article>
-    <article class="feature-card"><span class="num">02</span><div class="feature-icon green-icon">♫</div><h3>Your listening space</h3><p>A personal music experience with an emphasis on clarity and usability.</p></article>
-    <article class="feature-card"><span class="num">03</span><div class="feature-icon olive-icon">↗</div><h3>Always improving</h3><p>Follow official releases and get the latest app version from one trusted place.</p></article>
-  </div>
-</section>
-<section class="download-band wrap"><div><div class="eyebrow">READY WHEN YOU ARE</div><h2>Meet your new<br>music space.</h2><p>Get HUMBLE MUSIC from the official download page.</p></div><a class="button primary" href="/download">Go to download <b>↗</b></a></section>
-</main>
-${footer}`
-
-const download = `
-${nav}
-<main class="subpage wrap">
-  <div class="eyebrow"><i></i> OFFICIAL ANDROID RELEASE</div>
-  <h1>Get <span class="gradient">HUMBLE MUSIC.</span></h1>
-  <p class="lead">Download the Android app from the official HUMBLE MUSIC release page.</p>
-  <section class="release-card">
-    <div class="release-top"><span class="release-icon">H</span><div><h2>HUMBLE MUSIC for Android</h2><p>Official APK distribution</p></div><span class="status">RELEASE PAGE</span></div>
-    <div class="release-placeholder"><span class="download-symbol">↓</span><h3>First release is being prepared</h3><p>The signed APK will appear here when the public release is ready.</p></div>
-    <p class="notice">Only install APK files published on this official website. Android may ask you to confirm installation and allow installs from your browser.</p>
-  </section>
-  <p class="backlink"><a href="/">← Back to home</a></p>
-</main>
-${footer}`
-
-const updates = `
-${nav}
-<main class="subpage wrap">
-  <div class="eyebrow">RELEASE NOTES</div><h1>Updates & <span class="gradient">changes.</span></h1>
-  <p class="lead">Official HUMBLE MUSIC version history will be published here.</p>
-  <section class="release-card"><span class="status">UPDATE CHANNEL</span><h2>Release history</h2><p class="muted">No public release notes have been published yet. Check back when the first official release is available.</p></section>
-</main>
-${footer}`
-
-const legal = (title, body) => `${nav}<main class="subpage wrap"><div class="eyebrow">HUMBLE STUDIO</div><h1>${title}</h1><p class="lead">${body}</p><section class="release-card"><h2>Information</h2><p>This page is a starter placeholder. Before public launch, replace it with the complete policy and contact details applicable to the released app and its services.</p></section></main>${footer}`
-
-app.innerHTML = path === '/download' ? download : path === '/updates' ? updates : path === '/privacy' ? legal('Privacy <span class="gradient">policy.</span>','The privacy policy for HUMBLE MUSIC.') : path === '/terms' ? legal('Terms of <span class="gradient">use.</span>','Terms for using HUMBLE MUSIC.') : home
+const cookieKey = 'humble-cookie-notice-dismissed'
+if (!localStorage.getItem(cookieKey)) {
+  const banner = document.createElement('aside')
+  banner.className = 'cookie-banner'
+  banner.innerHTML = `<div><b>Just the essentials.</b><p>This site uses local storage to remember this notice. No advertising or analytics cookies are currently used.</p><a href="/cookies">Cookie notice</a></div><button type="button" class="cookie-accept">Got it</button>`
+  document.body.append(banner)
+  banner.querySelector('button').addEventListener('click', () => { localStorage.setItem(cookieKey, '1'); banner.remove() })
+}

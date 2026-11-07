@@ -1,15 +1,13 @@
 {
   "appName": "HUMBLE MUSIC",
-  "latestVersion": "1.0.1",
-  "versionCode": 2,
-  "minimumVersionCode": 1,
+  "latestVersion": "2.3.0",
+  "versionCode": 200,
+  "minimumVersionCode": 200,
   "downloadPage": "https://humblemusic.vercel.app/download",
-  "apkUrl": "",
-  "releaseDate": "2026-11-07",
+  "apkUrl": "https://github.com/humblelyy/humble-music/releases/latest/download/app-arm64-v8a-debug.apk",
+  "releaseDate": "",
   "changelog": [
-    "Improved performance",
-    "Bug fixes",
-    "UI improvements"
+    "ARM64 and ARM32 Android packages are listed on the official download page."
   ],
   "forceUpdate": false
 }

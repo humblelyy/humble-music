@@ -1,26 +1,19 @@
 # HUMBLE MUSIC Website
 
-Vite-based starter website for `humble-music.vercel.app`.
+Vite static website for HUMBLE MUSIC.
 
-## Deploy on Vercel
-- Framework preset: **Vite**
-- Root directory: `./`
-- Build command: `npm run build`
-- Output directory: `dist`
-- Install command: `npm install`
+## Deploy
 
-The production build command is configured as `vite build`.
+1. Push this project to `humblelyy/humble-music` or upload the updated files to your website repository.
+2. Vercel will build with `npm run build`.
+3. Publish GitHub Release assets with the exact filenames `app-arm64-v8a-debug.apk` and `app-armeabi-v7a-debug.apk` for the current download links to work.
 
-## Run locally
-1. Install Node.js LTS.
-2. Open this folder in a terminal.
-3. Run `npm install`
-4. Run `npm run dev`
+## Important release note
 
-## Before public release
-- Upload the signed release APK to `public/downloads/`.
-- Update `public/update.json` with the real version, versionCode and APK URL.
-- Replace the placeholder privacy and terms pages with complete policies.
-- Verify the download and update links on a real Android device.
+The current links target GitHub's latest release and the APK filenames from the supplied test builds. These files are debug builds. Before a public production release, create and sign release APKs, upload them as release assets, and update the filenames/links in `src/main.js`.
 
-The included `update.json` is a starter template, not a published release announcement. Do not advertise a version until its signed APK is available.
+VirusTotal links are supplied reports for the file hashes provided by the project owner. The website does not claim that either file is clean or safe; visitors should review the live reports themselves.
+
+## Update metadata
+
+Edit `public/update.json` whenever a new app version is published. Ensure `latestVersion`, `versionCode`, `minimumVersionCode`, `apkUrl`, `releaseDate` and `changelog` match the actual signed release.
