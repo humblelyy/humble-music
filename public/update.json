@@ -11,3 +11,22 @@
   ],
   "forceUpdate": false
 }
+
+
+
+
+{
+  "appName": "HUMBLE MUSIC",
+  "latestVersion": "2.3.1",
+  "versionCode": 201,
+  "minimumVersionCode": 200,
+  "downloadPage": "https://humblemusic.vercel.app/download",
+  "apkUrl": "",
+  "releaseDate": "2026-11-08",
+  "changelog": [
+    "New features",
+    "Performance improvements",
+    "Bug fixes"
+  ],
+  "forceUpdate": false
+}
