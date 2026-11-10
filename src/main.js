@@ -47,7 +47,7 @@ async function loadReleaseManifest() {
     if (!response.ok) throw new Error(`HTTP ${response.status}`)
     const release = await response.json()
     const version = String(release.latestVersion || '2.3.1')
-    const arm64 = release.arm64ApkUrl || `/downloads/HUMBLE-MUSIC-${version}-ARM64.apk`
+    const arm64 = release.arm64ApkUrl || `https://github.com/humblelyy/humble-music/releases/download/Humble_Music/Humble_Music_arm64.apk`
     const arm32 = release.arm32ApkUrl || `/downloads/HUMBLE-MUSIC-${version}-ARM32.apk`
     const versionLabel = document.querySelector('#release-version')
     if (versionLabel) versionLabel.textContent = `HUMBLE MUSIC ${version}`
