@@ -1,19 +1,12 @@
+
 {
-  "appName": "HUMBLE MUSIC",
-  "latestVersion": "2.3.1",
-  "versionCode": 201,
-  "minimumVersionCode": 201,
-  "packageName": "app.myspoti.stable",
+  "latestVersion": "2.3.2",
   "downloadPage": "https://humblemusic.vercel.app/download",
-  "apkUrl": "https://humblemusic.vercel.app/download",
-  "arm64ApkUrl": "/downloads/HUMBLE-MUSIC-2.3.1-ARM64.apk",
-  "arm32ApkUrl": "/downloads/HUMBLE-MUSIC-2.3.1-ARM32.apk",
-  "releaseDate": "2026-11-09",
+  "apkUrl": "",
+  "releaseDate": "2026-11-10",
   "changelog": [
-    "HUMBLE MUSIC 2.3.1 production baseline",
-    "Improved playback experience",
-    "Performance improvements",
-    "Bug fixes"
-  ],
-  "forceUpdate": false
+    "New features and improvements",
+    "Bug fixes",
+    "Performance improvements"
+  ]
 }
