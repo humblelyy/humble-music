@@ -47,3 +47,15 @@ Import the repository, use the default Vite settings (`npm run build`, output di
 - The screenshots in `public/assets` are the user-supplied reference captures.
 - No APK files are bundled into this website ZIP; the buttons download directly from GitHub Releases.
 - The website presents HUMBLE MUSIC as an independent project and does not imply Spotify endorsement.
+
+
+## Adsterra integration
+
+- Social Bar script is loaded once from `index.html`.
+- The homepage banner slot selects one supplied format by viewport width:
+  - 728×90 on wide desktop screens
+  - 300×250 on medium/tablet screens
+  - 320×50 on small/mobile screens
+- Each banner runs in an isolated iframe so the Adsterra `atOptions` global does not collide between formats.
+- The 15-second APK download preparation countdown is separate from Social Bar. Social Bar is not a guaranteed full-screen interstitial, and the countdown does not claim that an ad was viewed.
+- Ad delivery depends on Adsterra approval, inventory, visitor eligibility, browser settings and the provider's policies.
