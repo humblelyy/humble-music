@@ -3,20 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#101111" />
-    <meta name="description" content="Download HUMBLE MUSIC for Android. Choose ARM64 or ARM32 and review the VirusTotal scan reports." />
-    <meta property="og:title" content="HUMBLE MUSIC — Official Android Downloads" />
-    <meta property="og:description" content="Choose your Android build and review its scan report." />
+    <meta name="theme-color" content="#090909" />
+    <meta name="description" content="HUMBLE MUSIC is an Android music app with Spotify account sign-in and two interface options: Classic UI and HUMBLE UI." />
+    <meta property="og:title" content="HUMBLE MUSIC — Android app" />
+    <meta property="og:description" content="Explore Classic UI and HUMBLE UI. Download HUMBLE MUSIC for Android." />
     <meta property="og:type" content="website" />
-    <title>HUMBLE MUSIC Official Web</title>
+    <meta property="og:image" content="/assets/humble-mark.png" />
+    <title>HUMBLE MUSIC — Android app</title>
     <link rel="canonical" href="https://humblemusic.vercel.app/" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   </head>
   <body>
     <div id="app"></div>
+    <div class="download-modal" id="download-modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-card"><button class="modal-close" aria-label="Close download dialog">×</button><div class="modal-mark"><img src="/assets/humble-mark.png" alt="HUMBLE" /></div><div class="modal-eyebrow">HUMBLE MUSIC / DOWNLOAD</div><h2 id="modal-title">Your download is almost ready.</h2><p class="modal-description">We’re preparing the official GitHub release file for your device.</p><div class="sponsor-slot"><span>ADVERTISEMENT</span><strong>Ad placement</strong><small>A real ad will appear here after an ad provider is connected.</small></div><div class="countdown-row"><div><small id="modal-status">Preparing your download</small><strong><span id="modal-countdown">15</span><small> sec</small></strong></div><div class="countdown-ring">H</div></div><div class="countdown-track"><span class="countdown-progress"></span></div><p class="modal-footnote">Your download starts automatically when the countdown ends.</p></div>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

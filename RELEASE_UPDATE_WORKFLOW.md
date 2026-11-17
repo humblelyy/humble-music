@@ -1,7 +1,14 @@
-# HUMBLE MUSIC website release workflow
+# HUMBLE MUSIC release / website update workflow
 
-The website and Android app share `public/update.json`. The app reads `latestVersion`, `downloadPage`, `releaseDate`, and `changelog`; the download page reads the architecture-specific APK URLs.
+The in-app update checker and website use `public/update.json` as the release manifest.
 
-For every release, upload signed production APKs to `public/downloads/`, then update `latestVersion`, `versionCode`, `minimumVersionCode`, `arm64ApkUrl`, `arm32ApkUrl`, and `changelog` in `public/update.json`. Add VirusTotal URLs only after scanning the exact final APKs. Deploy to Vercel and verify `/update.json` and both download links.
+For a new Android release:
+1. Upload the signed ARM64 and ARM32 APK assets to the GitHub release.
+2. Update `latestVersion`, `versionCode`, `minimumVersionCode`, `releaseUrl`, `arm64ApkUrl`, `arm32ApkUrl`, `releaseDate` and `changelog` in `public/update.json`.
+3. Keep the `downloadPage` URL stable.
+4. Add VirusTotal report URLs only after scanning the exact final APK files, if the app/client supports those fields.
+5. Build and deploy the website. Verify `/update.json`, `/download`, and both release asset links.
 
-The first 2.3.1 production build is a new installation baseline. Existing apps signed with a different certificate need a one-time reinstall. All releases from 2.3.1 onward must keep the same package ID and private signing key.
+**Signing compatibility:** Keep the same Android package ID and private signing key for in-place app updates. If a release uses a different signing certificate, users may need to uninstall and reinstall, which can remove local app data.
+
+The current manifest points to the `Humble_Music` tag and its ARM64 / ARM32 assets.

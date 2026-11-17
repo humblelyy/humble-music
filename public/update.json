@@ -1,12 +1,13 @@
-
 {
   "latestVersion": "2.3.1",
   "downloadPage": "https://humblemusic.vercel.app/download",
-  "apkUrl": "",
+  "releaseUrl": "https://github.com/humblelyy/humble-music/releases/tag/Humble_Music",
+  "apkUrl": "https://github.com/humblelyy/humble-music/releases/download/Humble_Music/Humble_Music_arm64.apk",
+  "arm64ApkUrl": "https://github.com/humblelyy/humble-music/releases/download/Humble_Music/Humble_Music_arm64.apk",
+  "arm32ApkUrl": "https://github.com/humblelyy/humble-music/releases/download/Humble_Music/Humble_Music_arm32.apk",
   "releaseDate": "2026-11-10",
   "changelog": [
-    "New features and improvements",
-    "Bug fixes",
-    "Performance improvements"
+    "HUMBLE MUSIC 2.3.1 is available for Android.",
+    "Choose the ARM64 or ARM32 package that matches your device."
   ]
 }

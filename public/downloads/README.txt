@@ -1,7 +1,12 @@
-Place the signed production APK files here before deploying:
-- HUMBLE-MUSIC-2.3.1-ARM64.apk
-- HUMBLE-MUSIC-2.3.1-ARM32.apk
+HUMBLE MUSIC APKs are served directly from the official GitHub release.
 
-Do not upload debug APKs. The APKs must be signed with the permanent private production keystore.
-After scanning the final APKs, add their VirusTotal report URLs to public/update.json as arm64VirusTotalUrl and arm32VirusTotalUrl.
-For each future release, update public/update.json and the filenames/URLs together.
+Current release:
+https://github.com/humblelyy/humble-music/releases/tag/Humble_Music
+
+ARM64:
+https://github.com/humblelyy/humble-music/releases/download/Humble_Music/Humble_Music_arm64.apk
+
+ARM32:
+https://github.com/humblelyy/humble-music/releases/download/Humble_Music/Humble_Music_arm32.apk
+
+The website does not bundle APK binaries. When publishing a new release, update public/update.json with the new version, release URL and architecture-specific asset URLs. Add VirusTotal report URLs only after scanning the exact release files.
