@@ -45,7 +45,7 @@ const home = `${nav}<main>
 <div class="interface-showcase"><div class="interface-copy"><div class="interface-count" id="interface-count">01 / 02</div><h3 id="interface-title">Classic UI</h3><p id="interface-description">The Classic UI keeps the main music controls, playlists and library in a familiar layout.</p><div class="interface-tags" id="interface-tags"><span>Familiar controls</span><span>Playlists</span><span>Music library</span></div><div class="interface-arrows"><button class="arrow-button" data-step="prev" aria-label="Previous interface">←</button><button class="arrow-button" data-step="next" aria-label="Next interface">→</button></div></div><div class="interface-images" id="interface-images"><figure class="screen screen-main"><img id="screen-main" src="/assets/classic-home.jpeg" alt="Classic UI home screen"/><figcaption>HOME</figcaption></figure><figure class="screen screen-secondary"><img id="screen-secondary" src="/assets/classic-player.jpeg" alt="Classic UI player screen"/><figcaption>NOW PLAYING</figcaption></figure></div></div></section>
 <section class="details-section"><div class="wrap details-inner"><div class="section-kicker">03 — APP DETAILS</div><h2>App <em>features.</em></h2><div class="detail-grid"><article><span class="detail-number">01</span><div class="detail-symbol">◉</div><h3>Two interface styles</h3><p>Switch between Classic UI and HUMBLE UI.</p></article><article><span class="detail-number">02</span><div class="detail-symbol">♫</div><h3>Spotify-connected</h3><p>Sign in using your Spotify account.</p></article><article><span class="detail-number">03</span><div class="detail-symbol">↗</div><h3>Built for Android</h3><p>Download the ARM64 or ARM32 APK for your device.</p></article></div></div></section>
 <section class="platform-section wrap"><div class="section-kicker">04 — PLATFORMS</div><div class="platform-heading"><h2>Available <em>platforms.</em></h2><p>The Android version is available now. iOS and Android TV versions are not available yet.</p></div><div class="platform-grid"><a class="platform-card available" href="/download"><div class="platform-icon android-icon">${platformMarks.android}</div><div><h3>Android</h3><p>Available now · ARM64 / ARM32</p></div><span class="platform-arrow">↗</span></a><div class="platform-card coming"><div class="platform-icon apple-icon">${platformMarks.apple}</div><div><h3>iOS</h3><p>Coming soon</p></div><span class="coming-label">SOON</span></div><div class="platform-card coming"><div class="platform-icon tv-icon">${platformMarks.androidtv}</div><div><h3>Android TV</h3><p>Coming soon</p></div><span class="coming-label">SOON</span></div></div></section>
-<section class="ad-section wrap" id="advertisement"><div class="ad-section-heading"><div><div class="section-kicker">HOMEPAGE ADVERTISEMENT</div><h2><span>.</span></h2></div><span class="ad-label-pill">ADVERTISEMENT</span></div><div class="adsterra-banner-frame" id="adsterra-banner-slot" aria-label="Advertisement"><div class="adsterra-loading">Advertisement loading…</div></div><p class="ad-disclosure">Advertisement · Served by Adsterra. Availability and format may vary by device and visitor.</p></section>
+<section class="ad-section wrap" id="advertisement"><div class="ad-section-heading"><div><div class="section-kicker">HOMEPAGE ADVERTISEMENT</div><h2>Sponsored placement<span>.</span></h2></div><span class="ad-label-pill">ADVERTISEMENT</span></div><div class="adsterra-banner-frame" id="adsterra-banner-slot" aria-label="Advertisement"><div class="adsterra-loading">Advertisement loading…</div></div><p class="ad-disclosure">Advertisement · Served by Adsterra. Availability and format may vary by device and visitor.</p></section>
 <section class="closing-cta wrap"><div><div class="section-kicker">05 — DOWNLOAD</div><h2>Get HUMBLE<br><em>MUSIC.</em></h2></div><a class="button button-light" href="/download">Download for Android <span>↗</span></a></section>
 </main>${footer}`
 
@@ -109,27 +109,31 @@ async function loadReleaseManifest() {
 loadReleaseManifest()
 
 // Adsterra responsive banner. Each format runs in its own iframe so its
-// atOptions global cannot collide with the other banner sizes.
-function loadAdsterraBanner() {
-  const slot = document.querySelector('#adsterra-banner-slot')
-  if (!slot) return
+// atOptions global cannot collide with other banner instances.
+function getAdsterraFormat() {
   const width = window.innerWidth
-  const format = width >= 900
+  return width >= 900
     ? { width: 728, height: 90, key: '904c40f40fae339299065354b65663a1', src: 'https://bauval.org/22/904c40f40fae339299065354b65663a1' }
     : width >= 600
       ? { width: 300, height: 250, key: '03d4570fff0e14667c8338ef84dbb878', src: 'https://bauval.org/22/03d4570fff0e14667c8338ef84dbb878' }
       : { width: 320, height: 50, key: '46e607ec8f783cd3faeeda1b243e8eed', src: 'https://bauval.org/22/46e607ec8f783cd3faeeda1b243e8eed' }
-
-  slot.replaceChildren()
+}
+function createAdsterraFrame(format, title = 'Advertisement') {
   const frame = document.createElement('iframe')
-  frame.title = 'Advertisement'
+  frame.title = title
   frame.width = String(format.width)
   frame.height = String(format.height)
   frame.loading = 'lazy'
   frame.referrerPolicy = 'no-referrer-when-downgrade'
   frame.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox')
-  frame.srcdoc = `<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><style>html,body{margin:0;padding:0;background:transparent;overflow:hidden;width:${format.width}px;height:${format.height}px}</style></head><body><script>var atOptions={key:'${format.key}',format:'iframe',height:${format.height},width:${format.width},params:{}};<\/script><script src="${format.src}"><\/script></body></html>`
-  slot.append(frame)
+  frame.srcdoc = `<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><style>html,body{margin:0;padding:0;background:transparent;overflow:hidden;width:${format.width}px;height:${format.height}px}</style></head><body><script>var atOptions={key:'${format.key}',format:'iframe',height:${format.height},width:${format.width},params:{}};<\\/script><script src="${format.src}"><\\/script></body></html>`
+  return frame
+}
+function loadAdsterraBanner() {
+  const slot = document.querySelector('#adsterra-banner-slot')
+  if (!slot) return
+  const format = getAdsterraFormat()
+  slot.replaceChildren(createAdsterraFrame(format))
 }
 if (document.querySelector('#adsterra-banner-slot')) {
   loadAdsterraBanner()
@@ -146,12 +150,19 @@ const adModal = document.querySelector('#download-modal')
 if (adModal) {
   const title = adModal.querySelector('#modal-title'), timer = adModal.querySelector('#modal-countdown'), progress = adModal.querySelector('.countdown-progress'), status = adModal.querySelector('#modal-status'), close = adModal.querySelector('.modal-close')
   let interval = null, selectedUrl = '', remaining = 15
+  const modalAdSlot = adModal.querySelector('#modal-adsterra-slot')
+  function loadModalAd() {
+    if (!modalAdSlot) return
+    // Reuse the homepage's existing 320x50 mobile banner unit in the compact modal.
+    const format = { width: 320, height: 50, key: '46e607ec8f783cd3faeeda1b243e8eed', src: 'https://bauval.org/22/46e607ec8f783cd3faeeda1b243e8eed' }
+    modalAdSlot.replaceChildren(createAdsterraFrame(format, 'Download advertisement'))
+  }
   function finishDownload() { clearInterval(interval); interval = null; if (!selectedUrl) return; status.textContent = 'Your download is starting…'; window.location.assign(selectedUrl); setTimeout(() => { adModal.hidden = true; document.body.classList.remove('modal-open') }, 650) }
   function stop() { clearInterval(interval); interval = null; adModal.hidden = true; document.body.classList.remove('modal-open') }
   document.querySelectorAll('.download-trigger').forEach(button => button.addEventListener('click', () => {
     selectedUrl = button.dataset.arch === 'arm64' ? RELEASE.arm64 : RELEASE.arm32
     remaining = 15; timer.textContent = String(remaining); progress.style.transform = 'scaleX(0)'; status.textContent = 'Preparing your download'; title.textContent = `Your ${button.dataset.arch.toUpperCase()} download is almost ready.`
-    adModal.hidden = false; document.body.classList.add('modal-open')
+    adModal.hidden = false; document.body.classList.add('modal-open'); loadModalAd()
     interval = setInterval(() => { remaining -= 1; timer.textContent = String(remaining); progress.style.transform = `scaleX(${(15-remaining)/15})`; if (remaining <= 0) finishDownload() }, 1000)
   }))
   close?.addEventListener('click', stop)
