@@ -5,10 +5,11 @@
   "apkUrl": "https://github.com/humblelyy/humble-music/releases/download/Humble_Music/Humble_Music_arm64.apk",
   "arm64ApkUrl": "https://github.com/humblelyy/humble-music/releases/download/Humble_Music/Humble_Music_arm64.apk",
   "arm32ApkUrl": "https://github.com/humblelyy/humble-music/releases/download/Humble_Music/Humble_Music_arm32.apk",
-  "releaseDate": "2026-11-10",
+  "releaseDate": "17/11/2026",
   "changelog": [
-    "Bug fixed.",
+    "Bugs fixed.",
     "Improved the User experience.",
-    "Added More Extensions."
+    "Added More Extensions.",
+    "Fixed the Lossless experience."
   ]
 }
