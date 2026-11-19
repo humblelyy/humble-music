@@ -1,61 +1,118 @@
-# HUMBLE MUSIC Website
+# 🎧 HUMBLE MUSIC
 
-A responsive product website for HUMBLE MUSIC, built with Vite and the supplied app screenshots and brand mark.
+\<p align="center">   \<img src="assets/logo.png" width="160" alt="HUMBLE MUSIC Logo" /> \</p>
 
-## Requirements
-- Node.js 18+ (Node.js 20+ recommended)
-- npm
+\<h3 align="center">Your Music. Your Experience.\</h3>
 
-## Run locally
-```bash
-npm install
-npm run dev
-```
+\<p align="center">   A personalized music experience built around your Spotify account. \</p>
 
-## Production build
-```bash
-npm run build
-npm run preview
-```
+\<p align="center">   \<a href="YOUR_WEBSITE_LINK">Website\</a> ·   \<a href="[https://github.com/humblelyy/humble-music/releases](https://github.com/humblelyy/humble-music/releases)">Downloads\</a> ·   \<a href="YOUR_SUPPORT_LINK">Support\</a> \</p>
 
-The production site is generated in `dist/`.
+---
 
-## Pages
-- `/` — product landing page, interface comparison, platform availability and promotional placement
-- `/download` — ARM64 / ARM32 APK download flow, plus iOS and Android TV coming-soon states
-- `/updates` — current release information from `public/update.json`
-- `/privacy`, `/cookies`, `/terms` — legal information
+## About
 
-## Android release links
-The download buttons use the official assets from the `Humble_Music` GitHub release:
-- Release: https://github.com/humblelyy/humble-music/releases/tag/Humble_Music
-- ARM64: https://github.com/humblelyy/humble-music/releases/download/Humble_Music/Humble_Music_arm64.apk
-- ARM32: https://github.com/humblelyy/humble-music/releases/download/Humble_Music/Humble_Music_arm32.apk
+**HUMBLE MUSIC** is an Android music application that connects with your Spotify account and brings your playlists, songs, and listening experience into a personalized interface.
 
-The version and changelog are read from `public/update.json`. Keep its keys compatible with the app's update checker when publishing a new release.
+Choose between two interfaces, enjoy your music, and make the experience your own.
 
-## Advertising integration
-The homepage includes a reserved promotional placement and the download flow includes a 15-second download interstitial. These are front-end placeholders, not an active advertising network. To monetize, create an account with your chosen provider, obtain its approved website script/ad unit, review its policy and consent requirements, then insert its code in the marked `.ad-panel` / `.sponsor-slot` areas. Do not claim ad revenue or impressions until the provider is installed and verified.
+## Features
 
-## Fonts
-The page uses Manrope for display typography and DM Sans for interface/body text, loaded from Google Fonts with system fallbacks. If you prefer self-hosted fonts, place licensed WOFF2 files under `public/fonts` and replace the stylesheet link in `index.html` with `@font-face` declarations.
+- **Spotify Login** — Connect using your Spotify account.
+- **Your Music Library** — Access your songs and playlists.
+- **Ad-Free Playback** — Enjoy an uninterrupted listening experience.
+- **Lossless Audio** — High-quality audio support.
+- **Classic UI** — Familiar Spotify-style interface.
+- **HUMBLE UI** — A customized interface designed for HUMBLE MUSIC.
+- **Interface Switching** — Choose the UI that suits you.
+- **Android Support** — Designed for Android devices.
 
-## Deploy to Vercel
-Import the repository, use the default Vite settings (`npm run build`, output directory `dist`). `vercel.json` provides SPA rewrites and disables caching for the update manifest.
+## Screenshots
 
-## Notes
-- The screenshots in `public/assets` are the user-supplied reference captures.
-- No APK files are bundled into this website ZIP; the buttons download directly from GitHub Releases.
-- The website presents HUMBLE MUSIC as an independent project and does not imply Spotify endorsement.
+\<p align="center">
+&#x20; \<img src="assets/screenshots/classic-home.png" width="250" alt="Classic UI Home" />
+&#x20; &nbsp;
+&#x20; \<img src="assets/screenshots/humble-home.png" width="250" alt="HUMBLE UI Home" />
+\</p>
 
+\<p align="center">   \<img src="assets/screenshots/player.png" width="250" alt="Music Player" />   &nbsp;   \<img src="assets/screenshots/library.png" width="250" alt="Music Library" /> \</p>
 
-## Adsterra integration
+\<p align="center">   \<i>More screenshots coming soon.\</i> \</p>
 
-- Social Bar script is loaded once from `index.html`.
-- The homepage banner slot selects one supplied format by viewport width:
-  - 728×90 on wide desktop screens
-  - 300×250 on medium/tablet screens
-  - 320×50 on small/mobile screens
-- Each banner runs in an isolated iframe so the Adsterra `atOptions` global does not collide between formats.
-- The 15-second APK download preparation countdown is separate from Social Bar. Social Bar is not a guaranteed full-screen interstitial, and the countdown does not claim that an ad was viewed.
-- Ad delivery depends on Adsterra approval, inventory, visitor eligibility, browser settings and the provider's policies.
+## User Interfaces
+
+### Classic UI
+
+A familiar music interface with a Spotify-style layout for a comfortable listening experience.
+
+### HUMBLE UI
+
+A custom interface with its own visual identity, designed for the HUMBLE MUSIC experience.
+
+---
+
+## Download
+
+### Android
+
+Download the latest version of HUMBLE MUSIC for Android.
+
+| Architecture   | Download                                                                                                        |
+| -------------- | --------------------------------------------------------------------------------------------------------------- |
+| ARM64 (64-bit) | [Download APK](https://github.com/humblelyy/humble-music/releases/download/Humble_Music/Humble_Music_arm64.apk) |
+| ARM32 (32-bit) | [Download APK](https://github.com/humblelyy/humble-music/releases/download/Humble_Music/Humble_Music_arm32.apk) |
+
+> For most modern Android devices, ARM64 is the recommended version.
+
+### Other Platforms
+
+| Platform   | Availability   |
+| ---------- | -------------- |
+| Android    | 🟢 Available   |
+| iOS        | 🔜 Coming Soon |
+| Android TV | 🔜 Coming Soon |
+
+---
+
+## Installation
+
+1. Download the APK compatible with your device.
+2. Open the downloaded APK.
+3. Allow installation from unknown sources if Android asks.
+4. Complete the installation.
+5. Open HUMBLE MUSIC and sign in with Spotify.
+
+---
+
+## Website
+
+Visit the official HUMBLE MUSIC website for downloads, updates, information, and more.
+
+**🌐 Website:** [Visit HUMBLE MUSIC](YOUR_WEBSITE_LINK)
+
+---
+
+## Community & Support
+
+Need help, have suggestions, or found a bug?
+
+- 🌐 **Website:** [Official Website](YOUR_WEBSITE_LINK)
+- 🐛 **Issues:** [Report a Bug](https://github.com/humblelyy/humble-music/issues)
+- 💬 **Community:** [Discord Server](YOUR_DISCORD_LINK)
+- ☕ **Support the Project:** [Support HUMBLE MUSIC](YOUR_SUPPORT_LINK)
+
+---
+
+## Disclaimer
+
+HUMBLE MUSIC is an independent third-party project and is not affiliated with, endorsed by, or sponsored by Spotify.
+
+Spotify and its related trademarks, logos, and services belong to their respective owners. Use of this application is subject to applicable third-party terms and policies.
+
+---
+
+## Credits
+
+Designed and developed by **HUMBLE STUDIO**.
+
+\<p align="center">   Made with passion for music.   \<br/>\<br/>   \<b>HUMBLE MUSIC\</b> \</p>
