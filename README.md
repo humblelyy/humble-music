@@ -1,82 +1,107 @@
 # 🎧 HUMBLE MUSIC
 
-\<p align="center">   \<img src="public/logo.png" width="130" alt="HUMBLE MUSIC Logo" /> \</p>
+<p align="center">
+  <img src="public/assets/logo.png" width="120" alt="HUMBLE MUSIC Logo" />
+</p>
 
-\<h1 align="center">HUMBLE MUSIC\</h1>
+<h1 align="center">HUMBLE MUSIC</h1>
 
-\<p align="center">   \<b>Your Music. Your Experience.\</b> \</p>
+<p align="center">
+  <strong>Your Music. Your Experience.</strong>
+</p>
 
-\<p align="center">
-&#x20; A personalized music experience built around your Spotify account.
-\</p>
+<p align="center">
+  A personalized music experience built around your Spotify account.
+</p>
 
-\<p align="center">
-&#x20; \<a href="[https://humblemusic.vercel.app](https://humblemusic.vercel.app)">Official Website\</a> •
-&#x20; \<a href="[https://github.com/humblelyy/humble-music/releases](https://github.com/humblelyy/humble-music/releases)">Downloads\</a> •
-&#x20; \<a href="[https://github.com/humblelyy/humble-music/issues](https://github.com/humblelyy/humble-music/issues)">Report an Issue\</a>
-\</p>
+<p align="center">
+  <a href="https://humblemusic.vercel.app">Website</a> ·
+  <a href="https://github.com/humblelyy/humble-music/releases">Download</a> ·
+  <a href="https://github.com/humblelyy/humble-music/issues">Issues</a>
+</p>
 
-\<p align="center">
-&#x20; \<img src="[https://img.shields.io/badge/Platform-Android-8BAA63?style=flat-square](https://img.shields.io/badge/Platform-Android-8BAA63?style=flat-square)" />
-&#x20; \<img src="[https://img.shields.io/badge/Version-2.3.1-181818?style=flat-square](https://img.shields.io/badge/Version-2.3.1-181818?style=flat-square)" />
-&#x20; \<img src="[https://img.shields.io/badge/Interface-Classic%20%26%20HUMBLE-181818?style=flat-square](https://img.shields.io/badge/Interface-Classic%20%26%20HUMBLE-181818?style=flat-square)" />
-&#x20; \<img src="[https://img.shields.io/badge/Status-Active-8BAA63?style=flat-square](https://img.shields.io/badge/Status-Active-8BAA63?style=flat-square)" />
-\</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-Android-8BAA63?style=for-the-badge" alt="Android" />
+  <img src="https://img.shields.io/badge/Version-2.3.1-black?style=for-the-badge" alt="Version 2.3.1" />
+  <img src="https://img.shields.io/badge/Status-Active-8BAA63?style=for-the-badge" alt="Active" />
+</p>
 
 ---
 
 ## About
 
-**HUMBLE MUSIC** is an Android music application that connects with your Spotify account and brings your music, playlists, and listening experience into a personalized interface.
+**HUMBLE MUSIC** is an Android music application that connects with your Spotify account, bringing your songs, playlists, and music experience into a personalized environment.
 
-Designed with a focus on simplicity, customization, and the listening experience, HUMBLE MUSIC offers two distinct interfaces so you can choose the way you enjoy your music.
+Built with a focus on simplicity, interface customization, and the listening experience, HUMBLE MUSIC gives you two different interfaces to choose from — Classic UI and HUMBLE UI.
+
+Make your music experience your own.
 
 ---
 
 ## Features
 
-| Feature            | Description                                  |
-| ------------------ | -------------------------------------------- |
-| Spotify Login      | Connect using your Spotify account           |
-| Music Library      | Access your songs and playlists              |
-| Ad-Free Playback   | Enjoy uninterrupted playback                 |
-| High-Quality Audio | High-quality audio support                   |
-| Classic UI         | Familiar Spotify-style interface             |
-| HUMBLE UI          | A custom interface designed for HUMBLE MUSIC |
-| UI Switching       | Switch between your preferred interface      |
-| Android Support    | Built for Android devices                    |
+<table>
+  <tr>
+    <td>🎵</td>
+    <td><strong>Spotify Login</strong><br/>Connect with your Spotify account.</td>
+  </tr>
+  <tr>
+    <td>🎧</td>
+    <td><strong>Your Music</strong><br/>Access your songs and playlists.</td>
+  </tr>
+  <tr>
+    <td>🚫</td>
+    <td><strong>Ad-Free Playback</strong><br/>Enjoy uninterrupted listening.</td>
+  </tr>
+  <tr>
+    <td>🔊</td>
+    <td><strong>High-Quality Audio</strong><br/>Experience high-quality audio playback.</td>
+  </tr>
+  <tr>
+    <td>🖥️</td>
+    <td><strong>Classic UI</strong><br/>A familiar Spotify-style interface.</td>
+  </tr>
+  <tr>
+    <td>✨</td>
+    <td><strong>HUMBLE UI</strong><br/>A custom interface with its own identity.</td>
+  </tr>
+  <tr>
+    <td>🔄</td>
+    <td><strong>Interface Switching</strong><br/>Choose the interface that suits you.</td>
+  </tr>
+</table>
 
 ---
 
-## Two Interfaces. One Experience.
+## Interfaces
 
 ### Classic UI
 
-A familiar music interface with a Spotify-style layout, designed for a comfortable and recognizable listening experience.
+A familiar interface inspired by the traditional Spotify layout, keeping your music experience simple and recognizable.
 
 ### HUMBLE UI
 
-A custom interface with its own visual identity, built around the HUMBLE MUSIC experience.
+A custom-designed interface created for HUMBLE MUSIC, bringing a different visual experience to your everyday listening.
 
 ---
 
 ## Screenshots
 
-\<p align="center">
-&#x20; \<img src="public/screenshots/classic-home.png" width="260" alt="Classic UI" />
-&#x20; &nbsp;&nbsp;
-&#x20; \<img src="public/screenshots/humble-home.png" width="260" alt="HUMBLE UI" />
-\</p>
+<p align="center">
+  <img src="public/assets/classic-home.png" width="260" alt="HUMBLE MUSIC Classic Home" />
+  &nbsp;&nbsp;
+  <img src="public/assets/humble-home.png" width="260" alt="HUMBLE MUSIC Custom Home" />
+</p>
 
-\<p align="center">
-&#x20; \<img src="public/screenshots/player.png" width="260" alt="Music Player" />
-&#x20; &nbsp;&nbsp;
-&#x20; \<img src="public/screenshots/library.png" width="260" alt="Music Library" />
-\</p>
+<p align="center">
+  <img src="public/assets/player.png" width="260" alt="HUMBLE MUSIC Player" />
+  &nbsp;&nbsp;
+  <img src="public/assets/library.png" width="260" alt="HUMBLE MUSIC Library" />
+</p>
 
-\<p align="center">
-&#x20; \<i>More screenshots coming soon.\</i>
-\</p>
+<p align="center">
+  <i>Interface previews — more images coming soon.</i>
+</p>
 
 ---
 
@@ -84,63 +109,80 @@ A custom interface with its own visual identity, built around the HUMBLE MUSIC e
 
 ### Android
 
-Download the latest release of HUMBLE MUSIC.
+Get HUMBLE MUSIC for Android.
 
-| Architecture   | APK                                                                                                               |
-| -------------- | ----------------------------------------------------------------------------------------------------------------- |
-| ARM64 (64-bit) | [Download ARM64](https://github.com/humblelyy/humble-music/releases/download/Humble_Music/Humble_Music_arm64.apk) |
-| ARM32 (32-bit) | [Download ARM32](https://github.com/humblelyy/humble-music/releases/download/Humble_Music/Humble_Music_arm32.apk) |
+| Architecture | Download |
+|---|---|
+| ARM64 · 64-bit | [Download APK](https://github.com/humblelyy/humble-music/releases/download/Humble_Music/Humble_Music_arm64.apk) |
+| ARM32 · 32-bit | [Download APK](https://github.com/humblelyy/humble-music/releases/download/Humble_Music/Humble_Music_arm32.apk) |
 
-> **Recommended:** ARM64 for most modern Android devices.
+> ARM64 is recommended for most modern Android smartphones.
 
 ### Platform Availability
 
-| Platform   | Status      |
-| ---------- | ----------- |
-| Android    | Available   |
-| iOS        | Coming Soon |
-| Android TV | Coming Soon |
+| Platform | Availability |
+|---|---|
+| Android | 🟢 Available |
+| iOS | ⏳ Coming Soon |
+| Android TV | ⏳ Coming Soon |
 
 ---
 
 ## Installation
 
-1. Download the APK for your device architecture.
+1. Download the appropriate APK for your device.
 2. Open the downloaded APK file.
-3. Allow installation from unknown sources if prompted.
-4. Install HUMBLE MUSIC.
-5. Launch the app.
-6. Sign in using your Spotify account.
+3. If prompted, allow installation from unknown sources.
+4. Install the application.
+5. Launch HUMBLE MUSIC.
+6. Log in with your Spotify account.
 
 ---
 
-## Official Website
+## Website
 
-Visit the HUMBLE MUSIC website for downloads, release information, updates, and more.
+Explore the official HUMBLE MUSIC website to discover the app, access downloads, and check updates.
 
-\<p align="center">
-&#x20; \<a href="[https://humblemusic.vercel.app](https://humblemusic.vercel.app)">
-&#x20;   \<b>🌐 humblemusic.vercel.app\</b>
-&#x20; \</a>
-\</p>
+<p align="center">
+  <a href="https://humblemusic.vercel.app">
+    <img src="https://img.shields.io/badge/Visit-Official_Website-8BAA63?style=for-the-badge" alt="Visit Website" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://humblemusic.vercel.app">
+    <strong>humblemusic.vercel.app</strong>
+  </a>
+</p>
 
 ---
 
-## Support & Community
+## Updates & Releases
 
-Found a bug, have an idea, or need help?
+Stay up to date with the latest HUMBLE MUSIC releases, improvements, and changes.
 
-- **Website:** [humblemusic.vercel.app](https://humblemusic.vercel.app)
-- **GitHub Issues:** [Report bugs & request features](https://github.com/humblelyy/humble-music/issues)
-- **Releases:** [Latest downloads](https://github.com/humblelyy/humble-music/releases)
+- [All Releases](https://github.com/humblelyy/humble-music/releases)
+- [Latest Version](https://github.com/humblelyy/humble-music/releases/latest)
+
+---
+
+## Support
+
+Found a bug, have feedback, or want to suggest a feature?
+
+- 🌐 [Official Website](https://humblemusic.vercel.app)
+- 🐛 [Report an Issue](https://github.com/humblelyy/humble-music/issues)
+- 📦 [Download Releases](https://github.com/humblelyy/humble-music/releases)
 
 ---
 
 ## Disclaimer
 
-HUMBLE MUSIC is an independent third-party application and is not affiliated with, endorsed by, or sponsored by Spotify.
+HUMBLE MUSIC is an independent third-party application. It is not affiliated with, endorsed by, or sponsored by Spotify.
 
-Spotify and all related trademarks, logos, and services belong to their respective owners.
+Spotify and all related trademarks, logos, and services are the property of their respective owners.
+
+Users are responsible for ensuring their use of the application complies with applicable service terms and policies.
 
 ---
 
@@ -148,10 +190,10 @@ Spotify and all related trademarks, logos, and services belong to their respecti
 
 Designed and developed by **HUMBLE STUDIO**.
 
-\<p align="center">
-&#x20; Made with passion for music.
-\</p>
+<p align="center">
+  Made with passion for music.
+</p>
 
-\<p align="center">
-&#x20; \<b>HUMBLE MUSIC\</b>
-\</p>
+<p align="center">
+  <strong>HUMBLE MUSIC</strong>
+</p>
