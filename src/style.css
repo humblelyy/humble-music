@@ -39,3 +39,80 @@
 .adsterra-loading{font-size:12px;color:#8c8c8c;letter-spacing:.02em}
 .ad-disclosure{font-size:11px;line-height:1.6;color:#8b8b8b;margin:10px 2px 0}
 @media(max-width:599px){.adsterra-banner-frame{min-height:74px;padding:8px}}
+
+/* Update: smoother mobile navigation, inert future platforms, first-visit support notice */
+@media (max-width:680px){
+  .mobile-menu[hidden]{display:none!important}
+  .mobile-menu:not([hidden]){display:flex;opacity:0;transform:translateY(-9px);transition:opacity .22s ease,transform .22s ease}
+  .mobile-menu.menu-open{opacity:1;transform:translateY(0)}
+  .menu-toggle span{transition:transform .22s ease,opacity .18s ease}
+  .menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(3px) rotate(45deg)}
+  .menu-toggle[aria-expanded="true"] span:last-child{transform:translateY(-3px) rotate(-45deg)}
+  .mobile-menu a{padding:5px 0;min-height:34px;display:flex;align-items:center}
+  .hero-actions .button,.architecture-card .button{min-height:48px}
+  .interface-images{width:100%;overflow:visible}
+  .screen-main,.screen-secondary{max-width:44vw}
+  .adsterra-banner-frame{width:100%;min-height:60px;padding:4px;overflow:hidden}
+  .adsterra-banner-frame iframe{max-width:100%;margin:0 auto}
+  .modal-card{width:min(430px,calc(100vw - 24px));padding:22px}
+  .modal-adsterra-frame{width:100%;min-height:50px}
+  .modal-adsterra-frame iframe{width:min(320px,100%);height:50px}
+}
+.platform-card.coming,.coming-platform{position:relative;cursor:not-allowed!important;user-select:none;opacity:.72}
+.platform-card.coming:hover,.coming-platform:hover{transform:none!important;border-color:var(--line)!important}
+.platform-card.coming *,.coming-platform *{cursor:not-allowed!important}
+.unavailable-mark{position:absolute;right:9px;top:8px;z-index:2;width:18px;height:18px;border:1px solid #85837b;border-radius:50%;display:grid;place-items:center;color:#aaa;font-size:14px;line-height:1;background:#0b0b0b}
+.coming-platform{border:1px solid var(--line);border-radius:17px;padding:20px;display:flex;align-items:center;gap:13px;background:#0f0f0f}
+.support-notice-overlay{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.78);backdrop-filter:blur(15px);display:grid;place-items:center;padding:18px;opacity:1;transition:opacity .24s ease}
+.support-notice-overlay.notice-dismissed{opacity:0;pointer-events:none}
+.support-notice{width:min(440px,100%);background:#151514;border:1px solid #ffffff24;border-radius:24px;padding:30px;box-shadow:0 30px 100px #000;animation:notice-in .35s cubic-bezier(.2,.8,.2,1) both}
+.support-notice-mark{width:48px;height:48px;border-radius:12px;overflow:hidden;margin-bottom:20px}
+.support-notice-mark img{width:100%;height:100%;object-fit:cover}
+.support-notice h2{font:600 26px/1.1 'Manrope',sans-serif;letter-spacing:-.055em;margin:13px 0}
+.support-notice p{font-size:13px;line-height:1.8;color:#aaa79f;margin:0 0 24px}
+.support-notice-continue{width:100%;justify-content:space-between;min-height:50px}
+@keyframes notice-in{from{opacity:0;transform:translateY(12px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:420px){.support-notice{padding:23px}.support-notice h2{font-size:23px}.support-notice p{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.mobile-menu:not([hidden]),.support-notice-overlay,.support-notice{transition:none!important;animation:none!important}}
+@media(min-width:901px){.detail-grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:900px){.detail-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.detail-grid{grid-template-columns:1fr}}
+
+/* Refinements: notice auto-dismiss, readable unavailable platform marks, banner ad fallback, What's New hover preview */
+.apple-icon{background:#202124!important;border:1px solid #ffffff22!important;border-radius:14px!important;color:#fff!important}
+.apple-icon img{filter:none!important;opacity:1!important}
+.platform-card.coming .coming-label,.coming-platform .coming-label{display:inline-flex;align-items:center;gap:5px;border:1px solid #ffffff22;border-radius:20px;padding:6px 9px;color:#aaa;font-size:8px;letter-spacing:.08em;white-space:nowrap}
+.platform-card.coming,.coming-platform{cursor:not-allowed!important}
+.unavailable-mark{display:none!important}
+.adsterra-banner-frame{position:relative;min-height:120px!important;padding:12px!important;box-sizing:border-box!important}
+.adsterra-banner-frame iframe{position:relative;z-index:1;width:auto!important;height:auto!important;max-width:100%!important}
+.adsterra-loading{position:absolute;inset:0;z-index:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:12px;color:#8b8b8b;background:linear-gradient(135deg,#151515,#0b0b0b);border-radius:12px}
+.adsterra-loading strong{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#aaa}
+.adsterra-loading small{font-size:10px;line-height:1.5;max-width:90%}
+.modal-adsterra-frame{position:relative;min-height:90px!important}
+.modal-adsterra-frame iframe{position:relative;z-index:1;max-width:100%!important}
+.notice-auto{margin-top:24px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:10px;color:#aaa}
+.notice-progress{height:3px;flex:1;max-width:120px;border-radius:3px;background:linear-gradient(90deg,var(--acid),#f18db8);transform-origin:left;animation:notice-progress 2.4s linear forwards}
+@keyframes notice-progress{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.whats-new-preview{position:absolute;right:max(32px,calc((100vw - 1160px)/2));top:calc(100% + 10px);width:min(320px,calc(100vw - 28px));padding:18px;background:#151515;border:1px solid #ffffff24;border-radius:14px;box-shadow:0 22px 65px #0009;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .18s ease,transform .18s ease,visibility .18s;z-index:50;pointer-events:none}
+.whats-new-preview .preview-kicker{display:block;font-size:8px;letter-spacing:.16em;color:var(--acid);margin-bottom:8px}
+.whats-new-preview strong{font-size:12px;display:block}
+.whats-new-preview ul{margin:10px 0 12px;padding-left:16px;color:#aaa;font-size:10px;line-height:1.65}
+.whats-new-preview a{font-size:10px;color:var(--acid)}
+.site-header:has(.whats-new-link:hover) .whats-new-preview,.site-header:has(.whats-new-link:focus-visible) .whats-new-preview{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
+@media(max-width:680px){.whats-new-preview{display:none!important}.adsterra-banner-frame{min-height:100px!important;padding:6px!important}.adsterra-banner-frame iframe{max-width:100%!important}.modal-adsterra-frame{min-height:86px!important}.modal-adsterra-frame iframe{max-width:100%!important}.notice-auto{font-size:9px}}
+
+/* Native CSS interaction polish (lightweight component-inspired effects) */
+.screen,.architecture-card,.platform-card.available{transform-style:preserve-3d;transition:transform .2s ease,opacity .7s ease,border-color .2s;transform:perspective(900px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg)) translateY(0)}
+.button-light,.button-outline,.nav-download{position:relative;overflow:hidden}
+.button-light::after,.button-outline::after,.nav-download::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(160px circle at var(--shine-x,50%) var(--shine-y,50%),rgba(255,255,255,.24),transparent 60%);opacity:0;transition:opacity .2s}
+.button-light:hover::after,.button-outline:hover::after,.nav-download:hover::after{opacity:1}
+.whats-new-preview[aria-hidden="false"]{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
+.whats-new-preview li{animation:preview-item-in .28s both}
+.whats-new-preview li:nth-child(2){animation-delay:.04s}
+.whats-new-preview li:nth-child(3){animation-delay:.08s}
+@keyframes preview-item-in{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.screen,.architecture-card,.platform-card.available{transform:none!important;transition:none!important}.whats-new-preview li{animation:none!important}}
+
+/* Additional supplied ad units */
+.additional-ad-grid{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:center;margin-top:24px}.additional-ad-slot{position:relative;display:flex;align-items:center;justify-content:center;min-width:160px;min-height:100px;max-width:100%;overflow:hidden;border-radius:10px;background:rgba(255,255,255,.025);color:#777;font-size:10px;letter-spacing:.12em}.additional-ad-slot iframe{max-width:100%!important}.additional-ad-wide{flex-basis:100%;min-height:100px}.additional-ad-mobile{display:none}@media(max-width:520px){.additional-ad-grid{gap:12px}.additional-ad-slot{width:100%;min-height:70px}.additional-ad-wide{display:none}.additional-ad-mobile{display:flex}}
