@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/dev",
-      "destination": "/dev.html"
+      "destination": "/dev/index.html"
     },
     {
       "source": "/download",

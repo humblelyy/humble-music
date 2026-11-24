@@ -9,7 +9,7 @@ function DeveloperPage() {
     <header className="dev-header">
       <a className="dev-back" href="/" aria-label="Back to Humble Music"><span className="dev-back-arrow">←</span><span>BACK TO HUMBLE MUSIC</span></a>
       <div className="dev-brand-lockup">
-        <img src="/assets/logo.jpeg" alt="HUMBLE MUSIC logo" />
+        <img src="/humble-music-logo.jpeg" alt="HUMBLE MUSIC logo" />
         <div className="dev-brand-text"><span>HUMBLE MUSIC</span><small>DEVELOPER</small></div>
       </div>
     </header>
