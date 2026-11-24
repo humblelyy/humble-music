@@ -22,7 +22,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Platform-Android-8BAA63?style=flat-square">
-  <img src="https://img.shields.io/badge/Version-2.3.1-black?style=flat-square">
+  <img src="https://img.shields.io/badge/Version-2.3.1-black?style=flat-square"> /n
   <img src="https://img.shields.io/badge/Developer-HUMBLE%20Studio-black?style=flat-square">
 </p>
 
