@@ -22,12 +22,12 @@ const nav = `
 <header class="site-header">
   <div class="nav-shell wrap">
     <a class="brand" href="/" aria-label="HUMBLE MUSIC home"><img src="${logo}" alt=""/><span>HUMBLE<span class="brand-light"> MUSIC</span></span></a>
-    <nav class="desktop-nav" aria-label="Main navigation"><a href="/#about">About</a><a href="/#interfaces">App screens</a><a href="/download">Download</a><a href="/updates" class="whats-new-link" aria-describedby="whats-new-preview">What's new</a></nav>
+    <nav class="desktop-nav" aria-label="Main navigation"><a href="/#about">About</a><a href="/#interfaces">App screens</a><a href="/download">Download</a><a href="/updates" class="whats-new-link" aria-describedby="whats-new-preview">What's new</a><a href="/dev">Developer</a></nav>
     <a class="nav-download" href="/download">Get HUMBLE <span>↗</span></a>
     <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
   </div>
   <aside class="whats-new-preview" id="whats-new-preview" aria-hidden="true"><span class="preview-kicker">LATEST UPDATE</span><strong id="preview-version">HUMBLE MUSIC 2.3.1</strong><ul id="preview-changelog"><li>Release notes loading…</li></ul><a href="/updates">View all updates ↗</a></aside>
-  <div class="mobile-menu" hidden><a href="/#about">About</a><a href="/#interfaces">App screens</a><a href="/download">Download</a><a href="/updates">What's new</a></div>
+  <div class="mobile-menu" hidden><a href="/#about">About</a><a href="/#interfaces">App screens</a><a href="/download">Download</a><a href="/updates">What's new</a><a href="/dev">Developer</a></div>
 </header>`
 
 const footer = `
@@ -39,17 +39,17 @@ const footer = `
 
 const home = `${nav}<main>
 <section class="hero wrap">
-  <div class="hero-copy reveal"><div class="eyebrow"><span class="eyebrow-line"></span> THE HUMBLE MUSIC APP</div><h1>Music playback.<br><span class="hero-italic">Your choice of interface.</span></h1><p class="hero-description">HUMBLE MUSIC connects with your Spotify account. Choose between Classic UI and HUMBLE UI.</p><div class="hero-actions"><a class="button button-light" href="/download">Get HUMBLE MUSIC <span>↗</span></a><a class="text-button" href="#interfaces">View app screens <span>↓</span></a></div><div class="hero-footnote"><span class="availability-dot"></span> Available for Android <span class="footnote-divider">/</span> iOS and Android TV coming soon</div></div>
+  <div class="hero-copy reveal"><div class="eyebrow"><span class="eyebrow-line"></span> HUMBLE MUSIC · ANDROID</div><h1>Listen your way.<br><span class="hero-italic">Make it yours.</span></h1><p class="hero-description">Spotify library, with two distinct ways to listen. Pick the interface that feels right and keep your music close.</p><div class="hero-actions"><a class="button button-light" href="/download">Get HUMBLE <span>↗</span></a><a class="text-button" href="#interfaces">View app screens <span>↓</span></a></div><div class="hero-footnote"><span class="availability-dot"></span> Available for Android <span class="footnote-divider">/</span> iOS and Android TV coming soon</div></div>
   <div class="hero-visual reveal"><div class="hero-glow"></div><div class="hero-device device-back"><img src="/assets/humble-player.jpeg" alt="HUMBLE UI music player"/></div><div class="hero-device device-front"><img src="/assets/classic-home.jpeg" alt="Classic interface home screen"/></div><div class="floating-note"><span class="note-dot"></span><span><b>Two interfaces</b><small>Classic UI and HUMBLE UI</small></span></div><div class="visual-index">H / 02</div></div>
 </section>
 
-<section class="intro-section wrap" id="about"><div class="section-kicker">01 — ABOUT THE APP</div><div class="intro-grid"><h2>One app.<br><span>Two interfaces.</span></h2><div class="intro-copy"><p>Connect with your Spotify Free account to bring your playlists, liked songs and saved music into HUMBLE MUSIC. Choose Classic UI or HUMBLE UI, with ad-free listening and high-quality audio features.</p><a class="inline-link" href="#interfaces">Explore the app <span>↗</span></a></div></div></section>
-<section class="interface-section wrap" id="interfaces"><div class="section-top"><div><div class="section-kicker">02 — APP INTERFACES</div><h2>Choose your <em>interface.</em></h2></div><div class="interface-controls" role="tablist" aria-label="Choose app interface"><button class="interface-tab active" data-interface="classic" role="tab" aria-selected="true">Classic UI</button><button class="interface-tab" data-interface="humble" role="tab" aria-selected="false">HUMBLE UI</button></div></div>
-<div class="interface-showcase"><div class="interface-copy"><div class="interface-count" id="interface-count">01 / 02</div><h3 id="interface-title">Classic UI</h3><p id="interface-description">The Classic UI keeps the main music controls, playlists and library in a familiar layout.</p><div class="interface-tags" id="interface-tags"><span>Familiar controls</span><span>Playlists</span><span>Music library</span></div><div class="interface-arrows"><button class="arrow-button" data-step="prev" aria-label="Previous interface">←</button><button class="arrow-button" data-step="next" aria-label="Next interface">→</button></div></div><div class="interface-images" id="interface-images"><figure class="screen screen-main"><img id="screen-main" src="/assets/classic-home.jpeg" alt="Classic UI home screen"/><figcaption>HOME</figcaption></figure><figure class="screen screen-secondary"><img id="screen-secondary" src="/assets/classic-player.jpeg" alt="Classic UI player screen"/><figcaption>NOW PLAYING</figcaption></figure></div></div></section>
-<section class="details-section"><div class="wrap details-inner"><div class="section-kicker">03 — APP DETAILS</div><h2>App <em>features.</em></h2><div class="detail-grid"><article><span class="detail-number">01</span><div class="detail-symbol">♫</div><h3>Your Spotify library</h3><p>Log in to access playlists, liked songs and saved music.</p></article><article><span class="detail-number">02</span><div class="detail-symbol">◈</div><h3>Ad-free listening</h3><p>A listening experience without Spotify Free audio ads.</p></article><article><span class="detail-number">03</span><div class="detail-symbol">♬</div><h3>Lossless audio support</h3><p>Lossless playback support for compatible audio sources and devices.</p></article><article><span class="detail-number">04</span><div class="detail-symbol">↗</div><h3>High-quality audio</h3><p>Audio quality options for your listening setup.</p></article></div></div></section>
+<section class="intro-section wrap" id="about"><div class="section-kicker">01 — ABOUT THE APP</div><div class="intro-grid"><h2>Made for your<br><span>music routine.</span></h2><div class="intro-copy"><p>Sign in with Spotify to access your playlists, liked songs and library. Switch between Classic UI and HUMBLE UI whenever you want.</p><a class="inline-link" href="#interfaces">Explore the app <span>↗</span></a></div></div></section>
+<section class="interface-section wrap" id="interfaces"><div class="section-top"><div><div class="section-kicker">02 — APP INTERFACES</div><h2>Two ways to <em>listen.</em></h2></div><div class="interface-controls" role="tablist" aria-label="Choose app interface"><button class="interface-tab active" data-interface="classic" role="tab" aria-selected="true">Classic UI</button><button class="interface-tab" data-interface="humble" role="tab" aria-selected="false">HUMBLE UI</button></div></div>
+<div class="interface-showcase"><div class="interface-copy"><div class="interface-count" id="interface-count">01 / 02</div><h3 id="interface-title">Classic UI</h3><p id="interface-description">A straightforward layout for browsing your library, finding playlists and getting to playback controls quickly.</p><div class="interface-tags" id="interface-tags"><span>Familiar controls</span><span>Playlists</span><span>Music library</span></div><div class="interface-arrows"><button class="arrow-button" data-step="prev" aria-label="Previous interface">←</button><button class="arrow-button" data-step="next" aria-label="Next interface">→</button></div></div><div class="interface-images" id="interface-images"><figure class="screen screen-main"><img id="screen-main" src="/assets/classic-home.jpeg" alt="Classic UI home screen"/><figcaption>HOME</figcaption></figure><figure class="screen screen-secondary"><img id="screen-secondary" src="/assets/classic-player.jpeg" alt="Classic UI player screen"/><figcaption>NOW PLAYING</figcaption></figure></div></div></section>
+<section class="details-section"><div class="wrap details-inner"><div class="section-kicker">03 — APP DETAILS</div><h2>Built around <em>your listening.</em></h2><div class="detail-grid"><article><span class="detail-number">01</span><div class="detail-symbol">♫</div><h3>Spotify library</h3><p>Your playlists, liked songs and saved tracks in one place.</p></article><article><span class="detail-number">02</span><div class="detail-symbol">◈</div><h3>No audio ads</h3><p>Enjoy playback without Spotify Free audio ads.</p></article><article><span class="detail-number">03</span><div class="detail-symbol">♬</div><h3>Lossless support</h3><p>Lossless playback where supported by the source and device.</p></article><article><span class="detail-number">04</span><div class="detail-symbol">↗</div><h3>Audio quality</h3><p>Choose the quality that suits your listening setup.</p></article></div></div></section>
 <section class="platform-section wrap"><div class="section-kicker">04 — PLATFORMS</div><div class="platform-heading"><h2>Available <em>platforms.</em></h2><p>The Android version is available now. iOS and Android TV versions are not available yet.</p></div><div class="platform-grid"><a class="platform-card available" href="/download"><div class="platform-icon android-icon">${platformMarks.android}</div><div><h3>Android</h3><p>Available now · ARM64 / ARM32</p></div><span class="platform-arrow">↗</span></a><div class="platform-card coming" aria-disabled="true" title="Unavailable"><div class="platform-icon apple-icon">${platformMarks.apple}</div><div><h3>iOS</h3><p>Coming soon</p></div><span class="coming-label"> UNAVAILABLE </span></div><div class="platform-card coming" aria-disabled="true" title="Unavailable"><div class="platform-icon tv-icon">${platformMarks.androidtv}</div><div><h3>Android TV</h3><p>Coming soon</p></div><span class="coming-label">UNAVAILABLE </span></div></div></section>
 <section class="ad-section wrap" id="advertisement"><div class="ad-section-heading"><div><div class="section-kicker">HOMEPAGE ADVERTISEMENT</div><h2>Sponsored<span>.</span></h2></div><span class="ad-label-pill">ADVERTISEMENT</span></div><div class="adsterra-banner-frame" id="adsterra-banner-slot" aria-label="Advertisement"><div class="adsterra-loading"><strong>Advertisement</strong><small>Ad space · Ads may not appear with blockers or limited inventory.</small></div></div><div class="additional-ad-grid" aria-label="Additional advertisement placements"><div class="additional-ad-slot" id="ad-300x250"><span>ADVERTISEMENT</span></div><div class="additional-ad-slot" id="ad-160x300"><span>ADVERTISEMENT</span></div><div class="additional-ad-slot additional-ad-wide" id="ad-728x90"><span>ADVERTISEMENT</span></div><div class="additional-ad-slot additional-ad-mobile" id="ad-320x50"><span>ADVERTISEMENT</span></div><div id="container-5da5f87f818aa673503a23100996a38c"></div></div><p class="ad-disclosure">Advertisement · Served by Adsterra. Availability and format may vary by device and visitor.</p></section>
-<section class="closing-cta wrap"><div><div class="section-kicker">05 — DOWNLOAD</div><h2>Get HUMBLE<br><em>MUSIC.</em></h2></div><a class="button button-light" href="/download">Download for Android <span>↗</span></a></section>
+<section class="closing-cta wrap"><div><div class="section-kicker">05 — DOWNLOAD</div><h2>Your music.<br><em>Your interface.</em></h2></div><a class="button button-light" href="/download">Download for Android <span>↗</span></a></section>
 </main>${footer}`
 
 // MANUAL PLATFORM LINK CONFIGURATION: Android APK URLs are defined in RELEASE.arm64 and RELEASE.arm32 above.
@@ -88,7 +88,7 @@ mobileMenu?.querySelectorAll('a').forEach(link => link.addEventListener('click',
 document.addEventListener('keydown', event => { if (event.key === 'Escape' && menuButton?.getAttribute('aria-expanded') === 'true') setMobileMenu(false) })
 
 const interfaceData = {
-  classic: {count:'01 / 02',title:'Classic UI',description:'The Classic UI keeps the main music controls, playlists and library in a familiar layout.',tags:['Familiar controls','Playlists','Music library'],home:'/assets/classic-home.jpeg',player:'/assets/classic-player.jpeg'},
+  classic: {count:'01 / 02',title:'Classic UI',description:'A straightforward layout for browsing your library, finding playlists and getting to playback controls quickly.',tags:['Familiar controls','Playlists','Music library'],home:'/assets/classic-home.jpeg',player:'/assets/classic-player.jpeg'},
   humble: {count:'02 / 02',title:'HUMBLE UI',description:'HUMBLE UI uses a custom layout with album artwork and redesigned playback controls.',tags:['Custom interface','Artwork-led player','Personal character'],home:'/assets/humble-home.jpeg',player:'/assets/humble-player.jpeg'}
 }
 function setInterface(key) {
@@ -225,8 +225,7 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   document.querySelectorAll('.reveal, .feature-card, .platform-card, .screen').forEach(el => observer.observe(el))
 } else document.querySelectorAll('.reveal, .feature-card, .platform-card, .screen').forEach(el => el.classList.add('is-visible'))
 
-// Lightweight interaction equivalents inspired by the supplied component snippets.
-// The original React component source files were not included in the ZIP; these are native JS/CSS implementations.
+// Subtle pointer interactions for image cards and controls.
 const motionOK = !window.matchMedia('(prefers-reduced-motion: reduce)').matches
 if (motionOK && window.matchMedia('(pointer:fine)').matches) {
   document.querySelectorAll('.screen, .architecture-card, .platform-card.available').forEach(el => {
@@ -249,3 +248,70 @@ if (whatsNewLink && whatsNewPreview) {
   whatsNewLink.addEventListener('focus', () => whatsNewPreview.setAttribute('aria-hidden','false'))
   whatsNewLink.addEventListener('blur', () => whatsNewPreview.setAttribute('aria-hidden','true'))
 }
+
+// Motion & interaction layer: scroll progress, gentle parallax, tab transitions and magnetic CTA.
+(() => {
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  const finePointer = window.matchMedia('(pointer:fine)').matches
+  const progress = document.createElement('div'); progress.className = 'scroll-progress'; document.body.append(progress)
+  const header = document.querySelector('.site-header')
+  let scrollQueued = false
+  const updateScrollUI = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight
+    document.documentElement.style.setProperty('--scroll-progress', max > 0 ? String(window.scrollY / max) : '0')
+    header?.classList.toggle('header-scrolled', window.scrollY > 12)
+    scrollQueued = false
+  }
+  updateScrollUI()
+  window.addEventListener('scroll', () => { if (!scrollQueued) { scrollQueued = true; requestAnimationFrame(updateScrollUI) } }, {passive:true})
+
+  // Animate additional content in with a stagger, rather than revealing whole blocks at once.
+  if (!reduced && 'IntersectionObserver' in window) {
+    const motionObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('is-visible'); motionObserver.unobserve(entry.target) }
+    }), {threshold:.1, rootMargin:'0px 0px -35px 0px'})
+    document.querySelectorAll('.detail-grid article,.intro-grid h2,.intro-copy,.section-top,.platform-heading,.closing-cta>div,.closing-cta>.button,.ad-section-heading,.download-heading,.platform-downloads,.release-card,.support-notice').forEach((el, index) => {
+      el.style.transitionDelay = `${Math.min(index % 5, 4) * 65}ms`
+      motionObserver.observe(el)
+    })
+  } else {
+    document.querySelectorAll('.detail-grid article,.intro-grid h2,.intro-copy,.section-top,.platform-heading,.closing-cta>div,.closing-cta>.button,.ad-section-heading,.download-heading,.platform-downloads,.release-card,.support-notice').forEach(el => el.classList.add('is-visible'))
+  }
+
+  if (!reduced && finePointer) {
+    const visual = document.querySelector('.hero-visual')
+    visual?.addEventListener('pointermove', event => {
+      const rect = visual.getBoundingClientRect(), px = (event.clientX - rect.left) / rect.width - .5, py = (event.clientY - rect.top) / rect.height - .5
+      visual.style.setProperty('--pointer-x', `${px}`); visual.style.setProperty('--pointer-y', `${py}`)
+      const glow = visual.querySelector('.hero-glow'), note = visual.querySelector('.floating-note')
+      if (glow) glow.style.transform = `translate3d(${px * 24}px,${py * 18}px,0) scale(1.04)`
+      if (note) note.style.translate = `${px * 9}px ${py * 7}px`
+    })
+    visual?.addEventListener('pointerleave', () => {
+      const glow = visual.querySelector('.hero-glow'), note = visual.querySelector('.floating-note')
+      if (glow) glow.style.transform = ''; if (note) note.style.translate = ''
+    })
+    document.querySelectorAll('.button-light,.button-outline,.nav-download').forEach(button => {
+      button.addEventListener('pointermove', event => {
+        const r = button.getBoundingClientRect(), x = (event.clientX - r.left - r.width / 2) * .08, y = (event.clientY - r.top - r.height / 2) * .08
+        button.style.transform = `translate3d(${x}px,${y}px,0)`
+      })
+      button.addEventListener('pointerleave', () => button.style.transform = '')
+    })
+  }
+
+  // Smooth crossfade the screenshots when switching interface tabs.
+  const showcase = document.querySelector('.interface-showcase')
+  document.querySelectorAll('.interface-tab,.arrow-button').forEach(control => control.addEventListener('click', () => {
+    const images = document.querySelector('.interface-images')
+    if (!images || reduced) return
+    images.classList.remove('interface-swap'); void images.offsetWidth; images.classList.add('interface-swap')
+  }))
+
+  // Small visual tap feedback, without changing button behavior or navigation.
+  document.querySelectorAll('.button,.nav-download,.arrow-button,.interface-tab').forEach(control => {
+    control.addEventListener('pointerdown', () => { if (!reduced) control.classList.add('is-pressed') })
+    const release = () => control.classList.remove('is-pressed')
+    control.addEventListener('pointerup', release); control.addEventListener('pointercancel', release); control.addEventListener('pointerleave', release)
+  })
+})()

@@ -1,0 +1,23 @@
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; width: 100%; min-height: 100%; }
+body { background: #050505; color: #fff; font-family: Inter, system-ui, sans-serif; }
+.stage { position: relative; width: 100%; height: 100vh; min-height: 600px; overflow: hidden; background: radial-gradient(ellipse at 50% 30%, #171717 0%, #080808 48%, #000 100%); }
+.lanyard-wrap { width: 100%; height: 100%; overflow: hidden; }
+.lanyard { position: relative; width: 100%; height: 100%; overflow: hidden; }
+.lanyard-canvas { display: block; width: 100%; height: 100%; }
+.hint { position: absolute; left: 50%; bottom: 24px; transform: translateX(-50%); color: #7b7b7b; font-size: 10px; letter-spacing: .22em; pointer-events: none; }
+@media (max-width: 600px) { .stage { min-height: 520px; } .hint { font-size: 9px; bottom: 16px; } }
+
+.quick-links { position:absolute; z-index:5; left:50%; bottom:52px; transform:translateX(-50%); display:flex; gap:10px; }
+.quick-links a { display:inline-flex; align-items:center; gap:8px; padding:9px 14px; border:1px solid rgba(210,210,210,.28); border-radius:999px; color:#d8d8d8; background:rgba(20,20,20,.72); text-decoration:none; font-size:10px; letter-spacing:.16em; transition:color .2s ease,border-color .2s ease,box-shadow .2s ease,transform .2s ease,background .2s ease; backdrop-filter:blur(10px); }
+.quick-links a span { font-size:14px; }
+.quick-links a:hover, .quick-links a:focus-visible { color:#fff; border-color:rgba(255,255,255,.8); background:rgba(65,65,65,.75); box-shadow:0 0 16px rgba(255,255,255,.22), inset 0 0 10px rgba(255,255,255,.08); transform:translateY(-2px); outline:none; }
+@media (max-width:600px) { .quick-links { bottom:42px; } .quick-links a { padding:8px 11px; font-size:9px; } }
+.dev-page{position:relative;min-height:100vh;height:100svh;overflow:hidden;background:radial-gradient(ellipse at 50% 36%,#17121f 0%,#080808 48%,#000 100%);color:#f4f4f4;padding:24px 5vw 26px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;font-family:'DM Sans',sans-serif}
+.dev-header{width:min(100%,1120px);display:flex;align-items:center;justify-content:space-between;padding:12px 0 18px;border-bottom:1px solid rgba(255,255,255,.075);z-index:9}
+.dev-back{display:inline-flex;align-items:center;gap:10px;color:#b1adb9;font-size:9px;letter-spacing:.14em;padding:11px 15px;border:1px solid rgba(255,255,255,.11);border-radius:999px;background:rgba(255,255,255,.025);transition:color .25s,border-color .25s,background .25s,transform .25s;text-decoration:none}.dev-back:hover{color:#fff;border-color:rgba(190,130,255,.45);background:rgba(153,80,255,.08);transform:translateY(-1px)}.dev-back-arrow{font-size:15px;line-height:1;color:#c58cff}
+.dev-brand-lockup{display:flex;align-items:center;gap:11px}.dev-brand-lockup img{width:38px;height:38px;object-fit:cover;border-radius:10px;border:1px solid rgba(190,140,255,.28);box-shadow:0 0 22px rgba(144,65,255,.1)}.dev-brand-text{display:flex;flex-direction:column;gap:4px}.dev-brand-text span{font-size:10px;font-weight:700;letter-spacing:.16em;color:#d9d5df}.dev-brand-text small{font-size:8px;letter-spacing:.25em;color:#8e879c}
+.dev-label{display:flex;align-items:center;gap:14px;margin-top:15px;font-size:8px;letter-spacing:.24em;color:#777180}.dev-label-line{width:clamp(25px,7vw,76px);height:1px;background:linear-gradient(90deg,transparent,rgba(181,124,255,.42))}.dev-label-line:last-child{transform:scaleX(-1)}
+.dev-card-stage{width:min(100%,760px);height:min(66vh,690px);min-height:390px;margin:auto;position:relative}.dev-card-stage .lanyard-wrap{width:100%;height:100%;overflow:hidden}
+.dev-bottom{width:min(100%,1000px);display:flex;justify-content:space-between;align-items:center;gap:16px;color:#666;font-size:9px;letter-spacing:.18em;z-index:5}.dev-bottom>div{display:none}
+@media(max-width:600px){.dev-page{padding:14px 4vw 20px}.dev-header{padding:9px 0 13px}.dev-back{font-size:7px;letter-spacing:.11em;padding:9px 11px;gap:7px}.dev-back-arrow{font-size:13px}.dev-brand-lockup{gap:8px}.dev-brand-lockup img{width:32px;height:32px;border-radius:8px}.dev-brand-text span{font-size:8px;letter-spacing:.12em}.dev-brand-text small{font-size:7px}.dev-label{margin-top:10px;font-size:7px;gap:9px}.dev-card-stage{height:72vh;min-height:340px}.dev-bottom{flex-direction:column;gap:13px}}

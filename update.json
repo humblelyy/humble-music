@@ -1,0 +1,11 @@
+{
+  "version": "Prototype 1.0",
+  "date": "Prototype preview",
+  "changelog": [
+    "Responsive HUMBLE MUSIC landing page prototype",
+    "Classic and HUMBLE UI feature overview",
+    "Android download modal with ARM64 and ARM32 choices",
+    "15-second download countdown flow",
+    "Update feed loading from JSON"
+  ]
+}
