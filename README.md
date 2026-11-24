@@ -66,15 +66,15 @@ A custom-designed interface with its own visual identity, built around the HUMBL
 ### Classic UI & HUMBLE UI
 
 <p align="center">
-  <img src="public/assets/classic-home.png" width="48%" alt="Classic UI Home">
-  <img src="public/assets/humble-home.png" width="48%" alt="HUMBLE UI Home">
+  <img src="public/assets/classic-home.jpeg" width="48%" alt="Classic UI Home">
+  <img src="public/assets/humble-home.jpeg" width="48%" alt="HUMBLE UI Home">
 </p>
 
 ### Music Player & Library
 
 <p align="center">
-  <img src="public/assets/player.png" width="48%" alt="Music Player">
-  <img src="public/assets/library.png" width="48%" alt="Music Library">
+  <img src="public/assets/classic-player.jpeg" width="48%" alt="Classic Music Player">
+  <img src="public/assets/humble-player.jpeg" width="48%" alt="Humble Music Library">
 </p>
 
 ---
