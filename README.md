@@ -1,7 +1,7 @@
 # 🎧 HUMBLE MUSIC
 
 <p align="center">
-  <img src="public/assets/logo.png" width="150" alt="HUMBLE MUSIC Logo">
+  <img src="assets/logo.jpeg" width="150" alt="HUMBLE MUSIC Logo">
 </p>
 
 <h1 align="center">HUMBLE MUSIC</h1>
